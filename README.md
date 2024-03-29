@@ -31,12 +31,9 @@ This repository contains the implementation of a Network Intrusion Detection Sys
     ```
     
 
-- - **\-c /etc/suricata/suricata.yaml**: Specifies the path to the main configuration file for Suricata. By default, Suricata looks for its configuration in this file. In this command, it points to the Suricata configuration file located at `/etc/suricata/suricata.yaml`.
-        
-        - **\-S custom.rules**: Loads a custom rules file exclusively. This option instructs Suricata to use the specified file (`custom.rules`) for intrusion detection rules. These rules define the criteria for identifying suspicious network traffic and potential security threats.
-            
-        - **\-i** : Specifies the network interface on which Suricata will listen for network traffic. This interface is where Suricata will capture packets and analyze them for suspicious activity. Replace `<interface>` with the name of the network interface you want Suricata to monitor, such as `eth0` or `ens33`.
-            
+- **\-c /etc/suricata/suricata.yaml**: Specifies the path to the main configuration file for Suricata. By default, Suricata looks for its configuration in this file. In this command, it points to the Suricata configuration file located at `/etc/suricata/suricata.yaml`.
+- **\-S custom.rules**: Loads a custom rules file exclusively. This option instructs Suricata to use the specified file (`custom.rules`) for intrusion detection rules. These rules define the criteria for identifying suspicious network traffic and potential security threats.
+- **\-i** : Specifies the network interface on which Suricata will listen for network traffic. This interface is where Suricata will capture packets and analyze them for suspicious activity. Replace `<interface>` with the name of the network interface you want Suricata to monitor, such as `eth0` or `ens33`.
 
 ## Usage
 
