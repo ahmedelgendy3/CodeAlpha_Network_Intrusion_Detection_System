@@ -24,10 +24,10 @@ This repository contains the implementation of a Network Intrusion Detection Sys
     
     Create or modify the Suricata rules file (`custom.rules`) to define custom intrusion detection rules tailored to your network environment and security requirements.
     
-
 ## Configuration
 
-- **Suricata Configuration**: Modify the Suricata configuration file (`/etc/suricata/suricata.yaml`) to customize various settings such as interface configuration, logging options, and performance tuning.
+- **Suricata Configuration**: Modify the Suricata configuration file (`/etc/suricata/suricata.yaml`) to customize various settings such as interface configuration, logging options, and performance tuning. Ensure to update the `$HOME_NET` variable in the configuration file to reflect your actual internal network subnet.
+
 
 ## Usage
 
