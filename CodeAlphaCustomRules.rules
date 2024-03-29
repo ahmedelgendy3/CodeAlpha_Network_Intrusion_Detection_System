@@ -5,16 +5,13 @@ alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"HTTP GET Request Detected"; 
 alert tcp any any -> $HOME_NET 23 (msg:"Telnet Connection Attempt Detected"; sid:2; rev:1;)
 
 # Rule 3: Detect ICMP Echo Request
-alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"ICMP Echo Request Detected"; icmp_type:8; sid:3; rev:1;)
+alert icmp any any -> any any (msg:"ICMP Echo Request Detected"; itype:8; sid:3; rev:1;)
 
 # Rule 4: Detect ICMP Echo Reply
-alert icmp $HOME_NET any -> $EXTERNAL_NET any (msg:"ICMP Echo Reply Detected"; icmp_type:0; sid:4; rev:1;)
+alert icmp any any -> any any (msg:"ICMP Echo Reply Detected"; itype:0; sid:4; rev:1;)
 
 # Rule 5: Detect SSH connection attempt
 alert tcp any any -> $HOME_NET 22 (msg:"SSH Connection Attempt Detected"; sid:5; rev:1;)
 
 # Rule 6: Detect FTP connection attempt
 alert tcp any any -> $HOME_NET 21 (msg:"FTP Connection Attempt Detected"; sid:6; rev:1;)
-
-# Rule 7: Detect ARP request
-alert arp any any -> any any (msg:"ARP Request Detected"; sid:7; rev:1;)
