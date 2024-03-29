@@ -24,18 +24,20 @@ This repository contains the implementation of a Network Intrusion Detection Sys
     
     Create or modify the Suricata rules file (`custom.rules`) to define custom intrusion detection rules tailored to your network environment and security requirements.
     
-5.  Start Suricata:
-    
-    ```bash
-    sudo suricata -c /etc/suricata/suricata.yaml -S custom.rules -i <interface>
-    ```
-    
 
-- **\-c /etc/suricata/suricata.yaml**: Specifies the path to the main configuration file for Suricata. By default, Suricata looks for its configuration in this file. In this command, it points to the Suricata configuration file located at `/etc/suricata/suricata.yaml`.
-- **\-S custom.rules**: Loads a custom rules file exclusively. This option instructs Suricata to use the specified file (`custom.rules`) for intrusion detection rules. These rules define the criteria for identifying suspicious network traffic and potential security threats.
-- **\-i** : Specifies the network interface on which Suricata will listen for network traffic. This interface is where Suricata will capture packets and analyze them for suspicious activity. Replace `<interface>` with the name of the network interface you want Suricata to monitor, such as `eth0` or `ens33`.
+## Configuration
+
+- **Suricata Configuration**: Modify the Suricata configuration file (`suricata.yaml`) to customize various settings such as interface configuration, logging options, and performance tuning.
 
 ## Usage
+
+```bash
+sudo suricata -c /etc/suricata/suricata.yaml -S custom.rules -i <interface>
+```
+
+- **-c /etc/suricata/suricata.yaml**: Specifies the path to the main configuration file for Suricata. By default, Suricata looks for its configuration in this file. In this command, it points to the Suricata configuration file located at `/etc/suricata/suricata.yaml`.
+- **-S custom.rules**: Loads a custom rules file exclusively. This option instructs Suricata to use the specified file (`custom.rules`) for intrusion detection rules. These rules define the criteria for identifying suspicious network traffic and potential security threats.
+- **-i**: Specifies the network interface on which Suricata will listen for network traffic. This interface is where Suricata will capture packets and analyze them for suspicious activity. Replace `<interface>` with the name of the network interface you want Suricata to monitor, such as `eth0` or `ens33`.
 
 The NIDS monitors network traffic on the specified interface using Suricata's rule-based detection engine. Detected events are logged and can be analyzed for potential security threats.
 
@@ -46,10 +48,6 @@ The NIDS monitors network traffic on the specified interface using Suricata's ru
 - **Event Logging**: Logs detected events to facilitate post-analysis and investigation of security incidents.
 - **Testing**: Includes testing methodologies to verify the effectiveness of custom rules and analyze live network traffic.
 
-## Configuration
-
-- **Suricata Configuration**: Modify the Suricata configuration file (`suricata.yaml`) to customize various settings such as interface configuration, logging options, and performance tuning.
-
 ## Testing
 
 1.  **Test Custom Rules**: Use test scenarios to verify the effectiveness of custom intrusion detection rules in detecting predefined attack patterns and anomalies.
@@ -58,10 +56,6 @@ The NIDS monitors network traffic on the specified interface using Suricata's ru
     
 3.  **Test with Metasploitable 2**: Deploy a vulnerable virtual machine (e.g., Metasploitable 2) on the same network and conduct targeted attacks (e.g., FTP, Telnet, SSH) to validate the NIDS's ability to detect and mitigate security risks.
     
-
-## Conclusion
-
-The CodeAlpha Network Intrusion Detection System provides a scalable and customizable solution for monitoring and protecting network infrastructure against a wide range of security threats. By leveraging Suricata's advanced detection capabilities and custom rule configurations, organizations can enhance their overall security posture and mitigate the risk of network-based attacks.
 
 ## Resources
 
