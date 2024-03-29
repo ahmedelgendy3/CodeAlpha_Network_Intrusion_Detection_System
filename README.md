@@ -27,7 +27,7 @@ This repository contains the implementation of a Network Intrusion Detection Sys
 
 ## Configuration
 
-- **Suricata Configuration**: Modify the Suricata configuration file (`suricata.yaml`) to customize various settings such as interface configuration, logging options, and performance tuning.
+- **Suricata Configuration**: Modify the Suricata configuration file (`/etc/suricata/suricata.yaml`) to customize various settings such as interface configuration, logging options, and performance tuning.
 
 ## Usage
 
